@@ -6,13 +6,13 @@ ENV DST_INSTALL_PATH /opt/dst_server
 ENV DST_USER_ROOT_PATH /app
 
 RUN addgroup -S steam \
+		&& mkdir $DST_INSTALL_PATH $home \
 		&& adduser \
 			--disabled-password \
 			--gecos "" \
 			--home $home \
 			--ingroup steam \
 			$user \
-		&& mkdir $DST_INSTALL_PATH $home \
 		&& chown -R steam:steam $home \
 		&& chown -R steam:steam $DST_INSTALL_PATH
 
