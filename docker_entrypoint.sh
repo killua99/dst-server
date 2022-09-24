@@ -21,7 +21,7 @@ steamcmd +force_install_dir "$DST_INSTALL_PATH" +login anonymous +app_update 343
 
 check_for_file "$DST_INSTALL_PATH/bin"
 
-cd "$install_dir/bin" || fail
+cd "$DST_INSTALL_PATH/bin" || fail
 
 run_shared=(./dontstarve_dedicated_server_nullrenderer)
 run_shared+=(-console)

@@ -1,6 +1,5 @@
 FROM steamcmd/steamcmd:alpine
 
-ARG DST_USER=steam
 ARG DST_HOME=/app
 ENV DST_INSTALL_PATH /opt/dst_server
 ENV DST_USER_ROOT_PATH /app
