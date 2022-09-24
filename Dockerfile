@@ -14,8 +14,8 @@ RUN set -eux \
     --home $DST_HOME \
     --ingroup steam \
     $DST_USER \
-  && chown -R $user:steam $DST_HOME \
-  && chown -R $user:steam $DST_INSTALL_PATH
+  && chown -R $DST_USER:steam $DST_HOME \
+  && chown -R $DST_USER:steam $DST_INSTALL_PATH
 
 COPY docker_entrypoint.sh /usr/local/bin/docker_entrypoint
 
