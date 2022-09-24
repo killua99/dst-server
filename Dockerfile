@@ -7,7 +7,7 @@ ENV DST_USER_ROOT_PATH /app
 
 RUN set -eux \
   && addgroup -S steam \
-  && mkdir $DST_INSTALL_PATH $  \
+  && mkdir $DST_INSTALL_PATH $DST_HOME  \
   && adduser \
     --disabled-password \
     --gecos "" \
