@@ -1,13 +1,13 @@
 FROM steamcmd/steamcmd:alpine
 
-ARG user steam
-ARG home /app
+ARG user=steam
+ARG home=/app
 ENV DST_INSTALL_PATH /opt/dst_server
 ENV DST_USER_ROOT_PATH /app
 
 RUN set -eux \
   && addgroup -S steam \
-  && mkdir $DST_INSTALL_PATH $home \
+  && mkdir $DST_INSTALL_PATH $  \
   && adduser \
     --disabled-password \
     --gecos "" \
