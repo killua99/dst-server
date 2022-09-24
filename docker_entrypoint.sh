@@ -1,4 +1,4 @@
-!#/usr/bin/env sh
+#!/usr/bin/env sh
 
 DST_ROOT_PATH="/app"
 DST_INSTALL_PATH="${DST_INSTALL_PATH:-dst_server}"
