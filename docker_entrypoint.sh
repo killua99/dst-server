@@ -17,12 +17,6 @@ function check_for_file()
 	fi
 }
 
-check_for_file "$DST_USER_ROOT_PATH/$DST_CLUSTER_NAME/cluster.ini"
-check_for_file "$DST_USER_ROOT_PATH/$DST_CLUSTER_NAME/cluster_token.txt"
-check_for_file "$DST_USER_ROOT_PATH/$DST_CLUSTER_NAME/Master/server.ini"
-check_for_file "$DST_USER_ROOT_PATH/$DST_CLUSTER_NAME/Caves/server.ini"
-
-
 steamcmd +force_install_dir "$DST_INSTALL_PATH" +login anonymous +app_update 343050 validate
 
 check_for_file "$DST_INSTALL_PATH/bin"
