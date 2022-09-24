@@ -5,7 +5,8 @@ ARG home /app
 ENV DST_INSTALL_PATH /opt/dst_server
 ENV DST_USER_ROOT_PATH /app
 
-RUN addgroup -S steam \
+RUN set -eux \
+  && addgroup -S steam \
   && mkdir $DST_INSTALL_PATH $home \
   && adduser \
     --disabled-password \
