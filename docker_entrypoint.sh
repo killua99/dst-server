@@ -17,7 +17,7 @@ function check_for_file()
 	fi
 }
 
-steamcmd +force_install_dir "$DST_INSTALL_PATH" +login anonymous +app_update 343050 validate
+steamcmd +force_install_dir "$DST_INSTALL_PATH" +login anonymous +app_update 343050 validate +quit
 
 check_for_file "$DST_INSTALL_PATH/bin"
 
