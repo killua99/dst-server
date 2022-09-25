@@ -24,8 +24,7 @@ check_for_file "$DST_INSTALL_PATH/bin"
 cd "$DST_INSTALL_PATH/bin" || fail
 
 run_shared=(./dontstarve_dedicated_server_nullrenderer)
-run_shared+=(-console)
-run_shared+=(-cluster "$cluster_name")
+run_shared+=(-cluster "$DST_CLUSTER_NAME")
 run_shared+=(-persistent_storage_root $DST_USER_ROOT_PATH)
 run_shared+=(-ugc_directory $DST_USER_ROOT_PATH/ugc)
 run_shared+=(-monitor_parent_process $$)
